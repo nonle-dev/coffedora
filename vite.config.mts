@@ -6,11 +6,15 @@ import zaloMiniApp from 'zmp-vite-plugin'
 // https://vitejs.dev/config/
 export default () => {
   return defineConfig({
+    base: './', 
     plugins: [react(), zaloMiniApp()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
       },
+    },
+    build: {
+      outDir: 'dist',  
     },
   })
 }
