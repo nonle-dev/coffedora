@@ -3,10 +3,9 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import zaloMiniApp from 'zmp-vite-plugin'
 
-// https://vitejs.dev/config/
 export default () => {
   return defineConfig({
-    base: './', 
+    base: '/',
     plugins: [react(), zaloMiniApp()],
     resolve: {
       alias: {
@@ -14,7 +13,7 @@ export default () => {
       },
     },
     build: {
-      outDir: 'dist',  
+      outDir: 'www', // ✅ Thay vì 'dist'
     },
   })
 }
